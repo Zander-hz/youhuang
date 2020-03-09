@@ -1,0 +1,18 @@
+<!--sql的唯一标识是由namespace.id来组成：称为statementId-->
+<mapper namespace="product">
+
+    <select id="selectList" resultType="cn.youhuang.pojo.User">
+        select * from user
+    </select>
+
+    <!--
+        User user = new User();
+        user.setId(13);
+        user.setusername("zander");
+    -->
+    <select id="selectOne" resultType="cn.youhuang.pojo.User" parameterType="cn.youhuang.pojo.User">
+        select * from user where id = #{id} and username = #{username}
+    </select>
+
+
+</mapper>

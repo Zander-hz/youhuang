@@ -1,0 +1,29 @@
+<!--sql的唯一标识是由namespace.id来组成：称为statementId-->
+<mapper namespace="cn.youhuang.dao.IUserDao">
+
+    <select id="findAll" resultType="cn.youhuang.pojo.User">
+        select * from user
+    </select>
+
+    <!--
+        User user = new User();
+        user.setId(1);
+        user.setusername("zander");
+    -->
+    <select id="findByCondition" resultType="cn.youhuang.pojo.User" parameterType="cn.youhuang.pojo.User">
+        select * from user where id = #{id} and username = #{username}
+    </select>
+
+
+    <insert id="insertUser" parameterType="cn.youhuang.pojo.User">
+        insert into user(id , username) values (#{id} , #{username})
+    </insert>
+
+    <update id="updateUserById" parameterType="cn.youhuang.pojo.User">
+        update user set username = #{username} where id = #{id}
+    </update>
+
+    <delete id="deleteUserById" parameterType="cn.youhuang.pojo.User">
+        delete from user where id = #{id}
+    </delete>
+</mapper>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--约束头-->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!--加载外部的properties配置文件-->
+    <properties resource="jdbc.properties"></properties>
+
+    <!--开启二级缓存-->
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="logImpl" value="log4j" />
+    </settings>
+
+    <!--给实体类的全限定类名起别名-->
+    <typeAliases>
+        <!--给单独的实体类起别名-->
+<!--        <typeAlias type="cn.youhuang.pojo.User" alias="user"></typeAlias>-->
+        <!--批量给该包下起别名，别名为该包下所有的类的本身的类名，不区分大小写-->
+        <package name="cn.youhuang.pojo"/>
+    </typeAliases>
+
+    <plugins>
+        <plugin interceptor="cn.youhuang.plugin.MyPlugin">
+            <property name="name" value="zander"/>
+        </plugin>
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+            <!--因插件支持多种数据库，而数据库的sql语句不同，故在此配置数据库类型-->
+            <property name="dialect" value="mysql"/>
+        </plugin>
+        <plugin interceptor="tk.mybatis.mapper.mapperhelper.MapperInterceptor">
+            <!--指定当前通用mapper接口使用的是哪一个-->
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+        </plugin>
+    </plugins>
+
+    <!-- environments:配置运行环境，可配置多个environment，例如分别代表开发、测试、运行环境 -->
+    <environments default="development">
+        <environment id="development">
+            <!--当前事务交由JDBC进行管理-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--POOLED表示使用mybatis提高的连接池-->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--引入映射配置文件-->
+    <mappers>
+        <!--单个配置文件，或包含某些元素内容的配置文件，例:*Mapper.xml-->
+<!--        <mapper resource="IOrderMapper.xml"></mapper>-->
+        <!--整包配置
+            注意：使用此方式，需要配置文件和Dao层接口同名同层
+            即接口IUserMapper存储在cn.youhuang.mapper包下
+            IUserMapper.xml也要放在cn/youhuang/mapper包下
+        -->
+        <package name="cn.youhuang.mapper"/>
+    </mappers>
+</configuration>

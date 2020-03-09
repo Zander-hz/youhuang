@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="007a7c7e-eeac-4b5d-92c9-53e7d0cf277a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Yc7RZK1rKOLzWiMHzksAeRxe6Q" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\idea2019.3.3\IdeaProjects\mybatis_multitable\src\main\resources" />
+      <recent name="E:\idea2019.3.3\IdeaProjects\mybatis_multitable\src\main\resources\cn\youhuang\mapper" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\idea2019.3.3\IdeaProjects\mybatis_multitable\src\main\resources" />
+      <recent name="E:\idea2019.3.3\IdeaProjects\mybatis_multitable\src\main\resources\cn\youhuang\mapper" />
+      <recent name="E:\idea2019.3.3\IdeaProjects\mybatis_multitable\src\main\resources\cn.youhuang.mapper" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MybatisTest.testCommonMapper">
+    <configuration name="MybatisTest.testCommonMapper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis_multitable" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.youhuang.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.youhuang.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.youhuang.test.MybatisTest" />
+      <option name="METHOD_NAME" value="testCommonMapper" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisTest.testManyToMany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis_multitable" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.youhuang.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.youhuang.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.youhuang.test.MybatisTest" />
+      <option name="METHOD_NAME" value="testManyToMany" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisTest.testOneToMany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis_multitable" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.youhuang.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.youhuang.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.youhuang.test.MybatisTest" />
+      <option name="METHOD_NAME" value="testOneToMany" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisTest.testPageHelper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis_multitable" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.youhuang.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.youhuang.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.youhuang.test.MybatisTest" />
+      <option name="METHOD_NAME" value="testPageHelper" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisTest.testRedisCache" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis_multitable" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.youhuang.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.youhuang.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.youhuang.test.MybatisTest" />
+      <option name="METHOD_NAME" value="testRedisCache" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MybatisTest.testCommonMapper" />
+        <item itemvalue="JUnit.MybatisTest.testPageHelper" />
+        <item itemvalue="JUnit.MybatisTest.testRedisCache" />
+        <item itemvalue="JUnit.MybatisTest.testManyToMany" />
+        <item itemvalue="JUnit.MybatisTest.testOneToMany" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="007a7c7e-eeac-4b5d-92c9-53e7d0cf277a" name="Default Changelist" comment="" />
+      <created>1583230020928</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583230020928</updated>
+      <workItem from="1583230025651" duration="10129000" />
+      <workItem from="1583288224253" duration="14174000" />
+      <workItem from="1583325617366" duration="8007000" />
+      <workItem from="1583374608160" duration="104000" />
+      <workItem from="1583418747338" duration="624000" />
+      <workItem from="1583453053711" duration="61000" />
+      <workItem from="1583556221572" duration="40000" />
+      <workItem from="1583575081862" duration="2263000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="93" y="202" key="#Project_Structure" timestamp="1583576950285">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="93" y="202" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1583576950285" />
+    <state x="364" y="288" key="#com.intellij.ide.util.MemberChooser" timestamp="1583331528949">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="364" y="288" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583331528949" />
+    <state x="352" y="247" key="#xdebugger.evaluate" timestamp="1583324354871">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="352" y="247" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1583324354871" />
+    <state width="1073" height="258" key="GridCell.Tab.0.bottom" timestamp="1583336722238">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1073" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583336722238" />
+    <state width="1073" height="258" key="GridCell.Tab.0.center" timestamp="1583336722238">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1073" height="258" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583336722238" />
+    <state width="1073" height="258" key="GridCell.Tab.0.left" timestamp="1583336722238">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1073" height="258" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583336722238" />
+    <state width="1073" height="258" key="GridCell.Tab.0.right" timestamp="1583336722238">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1073" height="258" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583336722238" />
+    <state width="1073" height="319" key="GridCell.Tab.1.bottom" timestamp="1583336722229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1073" height="319" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583336722229" />
+    <state width="1073" height="319" key="GridCell.Tab.1.center" timestamp="1583336722229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1073" height="319" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583336722229" />
+    <state width="1073" height="319" key="GridCell.Tab.1.left" timestamp="1583336722229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1073" height="319" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583336722229" />
+    <state width="1073" height="319" key="GridCell.Tab.1.right" timestamp="1583336722229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1073" height="319" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583336722229" />
+    <state x="369" y="326" key="com.intellij.ide.util.TipDialog" timestamp="1583374613470">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="369" y="326" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583374613470" />
+    <state x="222" y="314" width="672" height="678" key="search.everywhere.popup" timestamp="1583237170898">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="222" y="314" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1583237170898" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/youhuang/plugin/MyPlugin.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/youhuang/plugin/MyPlugin.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/youhuang/plugin/MyPlugin.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -2,9 +2,9 @@
     <!-- 数据库配置信息   -->
     <dataSource>
         <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-        <property name="jdbcUrl" value="jdbc:mysql:///mybatistest1"></property>
+        <property name="jdbcUrl" value="jdbc:mysql:///mybatis_test"></property>
         <property name="username" value="root"></property>
-        <property name="password" value="123456"></property>
+        <property name="password" value="root"></property>
     </dataSource>
 
 

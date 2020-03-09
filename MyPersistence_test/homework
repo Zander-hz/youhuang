@@ -1,0 +1,49 @@
+一、简单题
+
+1、Mybatis动态sql是做什么的？都有哪些动态sql？简述一下动态sql的执行原理？
+
+答：动态sql是在当业务逻辑较复杂时，编写的sql可以动态执行某些条件语句，将sql语句的优化在代码层执行，提高访问数据库的性能。
+  有六种动态sql标签:if,where,foreach,trim,set,choose,when,otherwise,bing。
+  执行原理：所有mapper映射文件存储在mappedStatements中，XMLScriptBuilder会解析mapper文件中Sql语句的的子节点，通过parseDynamicTags方法解析sql语句，当解析到子节点的类型是Node.ELEMENT_NODE时，创建对应的NodeHandler对象，并将isDynamic标记为true，封装到MixedSqlNode对象中，再封装到sqlSource的实体对象DynamicSqlSource中，交予Configuration中的mapperedStatements管理。当调用到对应的MappedStatement时，在已经排序好参数的parameterMappings中获取参数，按照顺序将占位符替换，形成完整的Sql语句执行。
+
+
+2、Mybatis是否支持延迟加载？如果支持，它的实现原理是什么？
+
+答：Mybatis只支持association关联对象的一对一查询和collection关联对象的一对多查询。需在全局配置文件中配置setting标签的lazyLoadingEnabled为true，aggressiveLazyLoading为false。实现原理是对象的set注入可以延迟加载。
+
+
+3、Mybatis都有哪些Executor执行器？它们之间的区别是什么？
+
+答:Mybatis有五种基本的执行器：
+
+1)BaseExecutor，Executor的基类，提供骨架方法，其他子类执行器，只要实现指定的抽象方法即可;
+
+2)SimpleExecutor,简单的Executor实现类，Mybaits默认使用的执行器，主要实现doUpdate,doQuery方法，每次执行负责开启一个Statement对象，用完立即关闭此Statement对象；
+
+3)ReuseExecutor，重用的Executor实现类。在同一个session中，以sql为key查询Statement对象，若存在则直接使用，若不存在则创建一个新的Statement对象。用完后不关闭Statement对象，而是存放在Map中以后可重用；
+
+4)BatchExecutor，批量处理执行sql语句的执行器。因mybatis默认执行的是SimpleExecutor执行器，若开启此执行器，需在工厂创建批量模式执行器sqlSessionFactory.openSession(ExecutorType.BATCH, false);
+
+5)CachingExecutor，支持二级缓存得Executor得实现类。当开启二级缓存，且mapper配置文件中设置了<cache/>开启二级缓存。
+
+
+4、简述下Mybatis得一级、二级缓存(分别从存储结构、范围、失效场景。三个方面来作答)？
+
+答：一级缓存存放在SqlSession对象中执行器里的PerpetualCache对象中，基于HashMap存储；范围是一次SqlSession会话中；失效场景：1）若SqlSession会话结束或调用close()方法，则释放PerpetualCache对象一级缓存也将不可用；2）SqlSeesion调用clearCache()或执行update(增删改)操作，会清空一级缓存中的数据，PerpetualCache对象仍可继续使用。
+
+二级缓存存储的数据，和地址无关；二级缓存是基于mapper文件的namespace存储的，作用范围为SqlSessionFactory层面，默认是关闭的，需配置开启二级缓存，且需要存储的实体对象实现序列化；失效场景：1)若第一次SqlSession查询后未执行close()或commit()方法时，因还未向二级缓存中写入，则二级缓存中没有数据；2)查询执行update(增删改)操作，会清空二级缓存中的数据。
+
+
+5、简述Mybatis的插件运行原理，以及如何编写一个插件？
+
+答：在Mybatis四大核心组件Executor，StatementHandler，ParameterHandler，ResultSetHandler处，提供了插件扩展机制，插件可以对这四大核心组件对象进行拦截，已达到增强核心对象功能的目的，Mybatis插件本质就是拦截器，底层是通过JDK动态代理实现的。
+
+创建的插件类，要实现Interceptor接口，重写里面的方法：
+
+1)intercept方法:在此方法中执行插件增强业务逻辑，最后通过返回invocation.proceed()继续执行原方法；
+
+2)plugin方法：通过Plugin.wrap(target, this)，为当前拦截器生成代理对象，返回此对象存到拦截器链中;
+
+3)setProperties方法:获取在配置文件plugin中设置的参数；
+
+再通过注解@Intercepts中的@Signature注解，设置type,method,args参数来表明要拦截的是哪个接口哪个方法。还需再全局配置文件中配置在plugins中，在标签plugin中设置interceptor属性为插件类的全路径名。则当Mybatis启动时，就会保存插件实例到interceptorChain拦截器链中。当调用到被增强的方法时，此插件类就会被调用。
